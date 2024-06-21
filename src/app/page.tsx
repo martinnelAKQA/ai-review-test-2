@@ -1,9 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import cx from 'classix';
+import Header from './Header'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+      <>
+        <Header/>
+    <main className={cx(styles.main, 'bg-white')}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -91,5 +95,6 @@ export default function Home() {
         </a>
       </div>
     </main>
+      </>
   );
 }
