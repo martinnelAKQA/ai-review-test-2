@@ -2,24 +2,24 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-800 text-white">
-      <nav className="flex justify-between items-center p-4">
-        <div>
-          <a href="/" className="text-xl font-bold">Logo</a>
-        </div>
-        <ul className="flex space-x-4">
-          <li><a href="/" className="hover:text-gray-300">Home</a></li>
-          <li className="relative group">
-            <a href="/" className="hover:text-gray-300">Products</a>
-            <ul className="absolute hidden bg-gray-800 text-white p-2 space-y-2 group-hover:block">
-              <li><a href="/">Product 1</a></li>
-              <li><a href="/">Product 2</a></li>
-              <li><a href="/">Product 3</a></li>
-            </ul>
-          </li>
-          <li><a href="/" className="hover:text-gray-300">About</a></li>
-          <li><a href="/" className="hover:text-gray-300">Contact</a></li>
-        </ul>
+    <header className="flex justify-between items-center p-4">
+      <div className="flex items-center space-x-4">
+        <img src="logo.png" alt="Logo" className="h-8 w-8" />
+        <nav>
+          <a href="#" className="text-gray-800 hover:text-gray-600">Home</a>
+          <a href="#" className="text-gray-800 hover:text-gray-600">About</a>
+          <div className="relative inline-block">
+            <button className="text-gray-800 hover:text-gray-600">Services</button>
+            <div className="absolute hidden bg-white p-2 rounded shadow-md">
+              <a href="#" className="block text-gray-800 hover:text-gray-600">Service 1</a>
+              <a href="#" className="block text-gray-800 hover:text-gray-600">Service 2</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <nav>
+        <a href="#" className="text-gray-800 hover:text-gray-600">Login</a>
+        <a href="#" className="text-gray-800 hover:text-gray-600">Sign Up</a>
       </nav>
     </header>
   );
